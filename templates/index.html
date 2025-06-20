@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editor de Jogadores</title>
+  <style>
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background: #f0f0f0;
+    }
+
+    /* Tamanhos ajustados: tudo 50% do anterior */
+    th.acoes, td.acoes {
+      width: 35px; /* Ações: 70 -> 35 */
+    }
+    th.id, td.id {
+      width: 25px; /* ID: 50 -> 25 */
+    }
+    th.nome, td.nome {
+      width: 60px; /* Nome: 120 -> 60 */
+    }
+    th.sobrenome, td.sobrenome {
+      width: 60px; /* Sobrenome: 120 -> 60 */
+    }
+    th.idade, td.idade {
+      width: 50px; /* Idade: novo, pequeno */
+    }
+    th.nacionalidade, td.nacionalidade {
+      width: 100px;
+    }
+    th.time, td.time {
+      width: 75px; /* Time: 150 -> 75 */
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Estilo para o container do form de busca + botões upload e baixar */
+    .search-download-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para os botões download e upload */
+    .btn-download, .btn-upload {
+      background: #2196F3;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn-download:hover {
+      background: #1976d2;
+    }
+    .btn-upload {
+      background: #4CAF50;
+    }
+    .btn-upload:hover {
+      background: #45a049;
+    }
+
+    input[type="file"] {
+      padding: 2px;
+      cursor: pointer;
+    }
+
+    form.upload-form {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+    }
+
+    .mensagem {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f0f8ff;
+      color: #333;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="mensagem">
+        {% for msg in messages %}
+          <p>{{ msg }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+  <div class="search-download-container">
+    <form method="GET" action="{{ url_for('index') }}" style="display: flex; gap: 10px; margin: 0;">
+      <input type="text" name="busca" placeholder="Buscar jogador..." value="{{ busca }}">
+      <input type="text" name="time" placeholder="Buscar por time..." value="{{ request.args.get('time', '') }}">
+      <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Formulário Upload -->
+    <form action="{{ url_for('upload_arquivo') }}" method="POST" enctype="multipart/form-data" class="upload-form">
+      <input type="file" name="arquivo" required>
+      <button type="submit" class="btn-upload">📤 Upload</button>
+    </form>
+
+    <!-- Botão Download -->
+    <a href="{{ url_for('download') }}" class="btn-download">📥 Baixar Arquivo</a>
+  </div>
+
+  <h1>Lista de Jogadores</h1>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th class="acoes">Ações</th>
+          <th class="id">ID</th>
+          <th class="nome">Nome</th>
+          <th class="sobrenome">Sobrenome</th>
+          <th class="idade">Idade</th>
+          <th class="nacionalidade">Nacionalidade</th>
+          <th class="time">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for jogador in jogadores %}
+        <tr>
+          <td class="acoes">
+            <a href="{{ url_for('editar', id=jogador.id) }}">Editar</a>
+          </td>
+          <td class="id">{{ jogador.id }}</td>
+          <td class="nome">{{ jogador.nome }}</td>
+          <td class="sobrenome">{{ jogador.sobrenome }}</td>
+          <td class="idade">{{ jogador.idade }}</td>
+          <td class="nacionalidade">{{ jogador.nacionalidade }}</td>
+          <td class="time">{{ jogador.time }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

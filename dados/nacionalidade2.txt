@@ -1,0 +1,161 @@
+Afeganistão/ 88 7E 32
+África do Sul/ 88 3E 10
+Albânia/ 88 3E 15
+Alemanha/ 88 BE 08
+Angola/ 88 FE 13
+Antilha/ 88 7E 29
+Antigua/ 88 3E 2D
+Arábia Saudita/ 88 7E 1E
+Argélia/ 88 BE 06
+Argentina/ 88 7E 10
+Armênia/ 88 7E 15
+Austrália/ 88 BE 0D
+Áustria/ 88 3E 1C
+Azerbaijão/ 88 BE 1E
+Barbados/ 88 BE 25
+Barém/ 88 3E 2C
+Bélgica/ 88 BE 10
+Benin/ 88 3E 21
+Bermudas/ 88 3E 20
+Bielorússia/ 88 FE 1A
+Bolívia/ 88 3E 06
+Bósnia/ 88 3E 04
+Brasil/ 88 7E 03
+Brunei/ 88 3E 30
+Bulgária/ 88 FE 05
+Burkina Faso/ 88 FE 19
+Burúndi/ 88 7E 1C
+Cabo Verde/ 88 7E 23
+Camarões/ 88 FE 12
+Canadá/ 88 BE 15
+Catar/ 88 FE 24
+Cazaquistão/ 88 3E 1E
+Centro-Africana/ 88 FE 35
+Chade/ 88 BE 1B
+Chile/ 88 7E 0A
+China/ 88 FE 06
+Chipre/ 88 3E 11
+Cingapura/ 88 FE 07
+Colômbia/ 88 3E 0A
+Comores/ 88 7E 3B
+Coréia do Norte/ 88 FE 27
+Coréia do Sul/ 88 FE 0E
+RP Congo/ 88 7E 1B
+Congo/ 88 BE 1A
+Costa Rica/ 88 FE 0C
+Costa do Marfim/ 88 FE 18
+Croácia/ 88 3E 0B
+Dinamarca/ 88 FE 03
+Dominicano/ 88 3E 25
+Egito/ 88 7E 0E
+Emirados/ 88 7E 21
+Equador/ 88 BE 12
+El Salvador/ 88 FE 22
+Escócia/ 88 BE 02
+Eslováquia/ 88 7E 05
+Eslovênia/ 88 FE 09
+Espanha/ 88 FE 0F
+Estados Unidos/ 88 7E 0F
+Estônia/ 88 FE 15
+Fiji/ 88 BE 26
+Filipinas/ 88 3E 2A
+Finlândia/ 88 7E 07
+França/ 88 7E 08
+Gabão/ 88 3E 24
+Gâmbia/ 88 3E 1A
+Gana/ 88 FE 0D
+Géorgia/ 88 BE 0B
+Granada/ 88 7E 24
+Grécia/ 88 FE 10
+Guadalupe/ 88 7E 26
+Guiana/ 88 3E 1D
+Guiné/ 88 BE 18
+Guiné-Bissau/ 88 3E 1D
+Guiné Equatorial/ 88 BE 34
+Haiti/ 88 7E 1D
+Holanda/ 88 FE 02
+Honduras/ 88 3E 07
+Hong Kong/ 88 3E 0F
+Hungria/ 88 7E 11
+Ilhas Faroé/ 88 3E 16
+Índia/ 88 FE 25
+Indonésia/ 88 FE 2A
+Inglaterra/ 88 3E 02
+Irã/ 88 3E 0E
+Iraque/ 88 FE 2D
+Irlanda/ 88 BE 09
+Irlanda do Norte/ 88 FE 11
+Islândia/ 88 BE 04
+Israel/ 88 7E 09
+Itália/ 88 7E 02
+Jamaica/ 88 7E 16
+Japão/ 88 7E 13
+Jordânia/ 88 BE 2F
+Letônia/ 88 FE 0B
+Líbano/ 88 7E 27
+Libéria/ 88 BE 16
+Líbia/ 88 FE 1F
+Liechtenstein/ 88 7E 1F
+Lituânia/ 88 BE 11
+Luxemburgo/ 88 FE 16
+Macedônia/ 88 FE 04
+Madagascar/ 88 FE 23
+Malásia/ 88 3E 28
+Malawi/ 88 7E 22
+Mali/ 88 7E 1A
+Malta/ 88 3E 09
+Marrocos/ 88 BE 0F
+Maurício/ 88 BE 22
+Mauritânia/ 88 3E 32
+México/ 88 7E 06
+Moldávia/ 88 3E 0C
+Montenegro/ 88 3E 39
+Montserrat/ 88 BE 29
+Moçambique/ 88 3E 17
+Noruega/ 88 FE 08
+Nova Caledônia/ 88 FE 33
+Nova Zelândia/ 88 BE 17
+Nigéria/ 88 BE 0E
+Níger/ 88 3E 35
+Noruega/ 88 FE 08
+Omã/ 88 3E 29
+País de Gales/ 88 3E 18
+Panamá/ 88 3E 19
+Paraguai/ 88 BE 0A
+Peru/ 88 3E 0D
+Polônia/ 88 3E 05
+Portugal/ 88 BE 03
+Quênia/ 88 BE 07
+Quirguistão/ 88 7E 28
+Romênia/ 88 7E 0C
+Rússia/ 88 3E 12
+Santa Lúcia/ 88 3E 1F
+São Cristóvão/ 88 3E 27
+São Tomé/ 88 BE 20
+Senegal/ 88 7E 19
+Serra Leoa/ 88 3E 14
+Sérvia/ 88 7E 12
+Síria/ 88 3E 1B
+Somália/ 88 BE 37
+Suazilândia/ 88 BE 21
+Suécia/ 88 3E 03
+Suíça/ 88 BE 05
+Suriname/ 88 FE 1B
+Tailândia/ 88 FE 17
+Taiwan/ 88 7E 2F
+Tajiquistão/ 88 FE 1C
+Tanzânia/ 88 BE 35
+Tchéquia/ 88 7E 04
+Togo/ 88 BE 14
+Trinidad & Tobago/ 88 3E 08
+Tunísia/ 88 BE 13
+Turcomenistão/ 88 FE 1E
+Turquia/ 88 FE 0A
+Ucrânia/ 88 BE 0C
+Uganda/ 88 BE 24
+Uruguai/ 88 7E 0D
+Uzbequistão/ 88 BE 1C
+Venezuela/ 88 7E 0B
+Vietnã/ 88 7E 33
+Zâmbia/ 88 FE 14
+Zimbabwe/ 88 7E 14

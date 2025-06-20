@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Upload de Arquivo</title>
+</head>
+<body>
+    <h1>Enviar arquivo para editar</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="arquivo" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">Voltar para lista de jogadores</a></p>
+</body>
+</html>

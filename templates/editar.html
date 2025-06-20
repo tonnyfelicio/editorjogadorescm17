@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editar Jogador</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Editar Jogador</h1>
+
+  <form method="POST" action="{{ url_for('salvar_nacionalidade', id=jogador.id) }}">
+    <label for="nacionalidade">Nacionalidade:</label>
+    <select name="nacionalidade" id="nacionalidade">
+      {% for nat in nacionalidades %}
+        <option value="{{ nat }}" {% if jogador.nacionalidade == nat %}selected{% endif %}>{{ nat }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" style="background:#673AB7; color:white;">Salvar Nacionalidade</button>
+  </form>
+
+  <form method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" value="{{ jogador.nome }}">
+
+    <label for="sobrenome">Sobrenome:</label>
+    <input type="text" name="sobrenome" id="sobrenome" value="{{ jogador.sobrenome }}">
+
+    <label for="idade">Idade:</label>
+    <select name="idade" id="idade">
+      <option value="NENHUM">-- Nenhum --</option>
+      {% for idade in idades %}
+        <option value="{{ idade }}" {% if idade == jogador.idade %}selected{% endif %}>{{ idade }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="goleiro">Goleiro:</label>
+    <select name="goleiro" id="goleiro">
+      <option value="SIM" {% if jogador.goleiro == "SIM" %}selected{% endif %}>SIM</option>
+      <option value="NÃO" {% if jogador.goleiro == "NÃO" %}selected{% endif %}>NÃO</option>
+    </select>
+
+    <label for="posicao1">Posição 1:</label>
+    <select name="posicao1" id="posicao1">
+      {% for pos in posicoes1 %}
+        <option value="{{ pos }}" {% if jogador.posicao1 == pos %}selected{% endif %}>{{ pos }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="posicao2">Posição 2:</label>
+    <select name="posicao2" id="posicao2">
+      {% for pos in posicoes2 %}
+        <option value="{{ pos }}" {% if jogador.posicao2 == pos %}selected{% endif %}>{{ pos }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="posicao3">Posição 3:</label>
+    <select name="posicao3" id="posicao3">
+      {% for opcao in posicoes3 %}
+        <option value="{{ opcao }}" {% if opcao == jogador.posicao3 %}selected{% endif %}>{{ opcao }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="posicao4">Posição 4:</label>
+    <select name="posicao4" id="posicao4">
+      {% for p in posicoes4 %}
+        <option value="{{ p }}" {% if jogador.posicao4 == p %}selected{% endif %}>{{ p }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="passe">Passe (0-99):</label>
+    <input type="text" name="passe" id="passe" value="{{ jogador.passe }}">
+
+    <label for="finalizacoes">Finalizações (0-99):</label>
+    <input type="text" name="finalizacoes" id="finalizacoes" value="{{ jogador.finalizacoes }}">
+
+    <label for="cruzamentos">Cruzamentos / GL (0-99):</label>
+    <input type="text" name="cruzamentos" id="cruzamentos" value="{{ jogador.cruzamentos }}">
+
+    <label for="tiroslongos">Tiros Longos (0-99):</label>
+    <input type="text" name="tiroslongos" id="tiroslongos" value="{{ jogador.tiroslongos }}">
+
+    <label for="drible">Drible / GL(Domínio) (0-99):</label>
+    <input type="text" name="drible" id="drible" value="{{ jogador.drible }}">
+
+    <label for="recepcao">Recepção / GL(1 a 1) (0-99):</label>
+    <input type="text" name="recepcao" id="recepcao" value="{{ jogador.recepcao }}">
+
+    <label for="movimento">Movimento (0-99):</label>
+    <input type="text" name="movimento" id="movimento" value="{{ jogador.movimento }}">
+
+    <label for="forca">Força / GL (0-100):</label>
+    <input type="text" name="forca" id="forca" value="{{ jogador.forca }}">
+
+    <label for="ritmo">Ritmo / GL (10-99):</label>
+    <input type="text" name="ritmo" id="ritmo" value="{{ jogador.ritmo }}">
+
+    <label for="energia">Energia / GL (0-99):</label>
+    <input type="text" name="energia" id="energia" value="{{ jogador.energia }}">
+
+    <label for="cabeceio">Cabeceio / GL(Bloquear Tiro/ Def. Penaltis):</label>
+    <select name="cabeceio" id="cabeceio">
+      {% for cabeceio in cabeceio %}
+        <option value="{{ cabeceio }}" {% if cabeceio == jogador.cabeceio %}selected{% endif %}>{{ cabeceio }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="roubada">Roubada (0-99):</label>
+    <input type="text" name="roubada" id="roubada" value="{{ jogador.roubada }}">
+
+    <label for="marcacao">Marcação / GL(Distribuição) (0-99):</label>
+    <input type="text" name="marcacao" id="marcacao" value="{{ jogador.marcacao }}">
+
+    <label for="pos_def">Pos def (0-99):</label>
+    <input type="text" name="pos_def" id="pos_def" value="{{ jogador.pos_def }}">
+
+    <label for="lideranca">Liderança / GL (0-96):</label>
+    <input type="text" name="lideranca" id="lideranca" value="{{ jogador.lideranca }}">
+
+    <label for="criatividade">Criatividade (0-99):</label>
+    <input type="text" name="criatividade" id="criatividade" value="{{ jogador.criatividade }}">
+
+    <label for="penaltis">Pênaltis/Faltas:</label>
+    <select name="penaltis" id="penaltis">
+      <option value="NENHUM" {% if jogador.penaltis == "NENHUM" %}selected{% endif %}>-- Nenhum --</option>
+      {% for p in penaltis_dict.keys() %}
+        <option value="{{ p }}" {% if jogador.penaltis == p %}selected{% endif %}>{{ p }}</option>
+      {% endfor %}
+    </select>
+
+    <label for="escanteios">Escanteios:</label>
+    <select name="escanteios" id="escanteios">
+      <option value="NENHUM">-- Nenhum --</option>
+      {% for p in escanteios_dict.keys() %}
+        <option value="{{ p }}" {% if jogador.escanteios == p %}selected{% endif %}>{{ p }}</option>
+      {% endfor %}
+    </select>
+
+    <button type="submit">Salvar</button>
+  </form>
+
+<h3>(TEMPO DE CONTRATO e VALOR DO JOGADOR)</h3>
+
+<table>
+  <tr>
+    <!-- Coluna 1: Contrato -->
+    <td style="padding-right: 40px; vertical-align: top;">
+      <form action="{{ url_for('atualizar_contrato', id=jogador.id, anos=4) }}" method="post">
+        <button type="submit" style="background:#2196F3; color:white;">4 anos de contrato</button>
+      </form>
+
+      <p style="text-align: center;">OU</p>
+
+      <form action="{{ url_for('atualizar_contrato', id=jogador.id, anos=8) }}" method="post">
+        <button type="submit" style="background:red; color:white;">8 anos de contrato</button>
+      </form>
+    </td>
+
+    <!-- Coluna 2: Valor do Jogador -->
+    <td style="vertical-align: top;">
+      <form method="POST" action="{{ url_for('aumentar_valor', id=jogador.id) }}">
+        <button type="submit" style="background-color:#4CAF50; color:white;">Aumentar Valor $</button>
+      </form>
+
+      <p style="text-align: center;">OU</p>
+
+      <form method="POST" action="{{ url_for('reduzir_valor', id=jogador.id) }}">
+        <button type="submit" style="background-color:yellow; color:black;">Reduzir Valor -$</button>
+      </form>
+    </td>
+  </tr>
+</table>
+
+  <p><a href="{{ url_for('index') }}">Voltar</a></p>
+</body>
+</html>
