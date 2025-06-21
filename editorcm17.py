@@ -424,7 +424,7 @@ def ler_jogadores():
             id_time = bloco[56:58]
             nome_time = times_dict.get(id_time, f"Sem Time ({id_time.hex().upper()})")
 
-            is_goleiro = bloco[39] == 0x80 and bloco[79] == 0xE0
+            is_goleiro = bloco[39] == 0x80 and bloco[79] in (0xE0, 0xD0)
 
             b41 = bloco[41]  # byte fixo (ex: 53)
             b42_real = (bloco[42] & 0xF0) >> 4  # parte alta do byte 42
